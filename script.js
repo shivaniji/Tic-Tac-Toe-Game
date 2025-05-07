@@ -19,22 +19,9 @@ const winPatterns = [
 
 const ResetGame = () => {
   turn = true;
-  enabledBoxes(); // Correctly calling the function
+  enabledBoxes(); 
   msgcontainer.classList.add("hide");
 };
-
-// const ResetGame = () => {
-//   turn = true;
-//   enabledBoxes{};
-//   msgcontainer.classList.add("hide");
-
-// };
-
-// const  ResetGame ={} =>{
-//   turn=true;
-
-// };
-
 boxes.forEach ((box)=> {
   box.addEventListener("click", () => {
    console.log("box was clicked")
@@ -73,12 +60,6 @@ const showWinner=(winner)=>{
 
 const checkWin = () => {
   for (let pattern of winPatterns) {
-    // console.log(pattern);
-    // console.log(pattern[0],pattern[1],[pattern[2]]);
-    // console.log(boxes[pattern[0]].innerText,boxes[pattern[1]].innerText,boxes[pattern[2]].innerText);
-
-    // console.log(boxes[pattern[0]].innerText,boxes[pattern[1]],boxes[pattern[2]]);
-
     let post1Val = boxes[pattern[0]].innerText;
     let post2Val = boxes[pattern[1]].innerText;
     let post3Val = boxes[pattern[2]].innerText;
@@ -96,5 +77,4 @@ const checkWin = () => {
 }
 
 newGame.addEventListener("click",ResetGame);
-// Reset.addEventListener("click",ResetGame);
 reset.addEventListener("click",ResetGame);
